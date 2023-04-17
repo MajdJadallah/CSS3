@@ -1,0 +1,54 @@
+body{
+  background-color: black;
+}
+.img{
+    width: 50px;
+    height: 50px;
+    margin-left: -150px;
+    animation: horse 4s linear  infinite normal none running;
+    -webkit-animation: horse 4s linear  infinite normal none running;
+}
+.img2{
+    margin-left: -175px;
+    width: 50px;
+    height: 50px;
+    animation: img2 4s linear 2s infinite normal none running;
+    -webkit-animation: img2 4s linear 1s infinite normal none running;
+}
+.img3{
+    margin-left: -200px;
+    width: 50px;
+    height: 50px;
+    animation: img3 4s linear 2s infinite normal none running;
+    -webkit-animation: img3 4s linear 2s infinite normal none running;
+}
+
+@keyframes horse{
+0%{
+translate: -100px;
+}
+100%{
+    translate: 1500px 100px;
+}
+
+}
+
+@keyframes img2{
+    0%{
+        translate: -100px;
+        }
+        100%{
+            translate: 1500px 200px;
+        }
+}
+
+
+
+@keyframes img3{
+    0%{
+        translate: -100px;
+        }
+        100%{
+            translate: 1500px 300px;
+        }
+}
