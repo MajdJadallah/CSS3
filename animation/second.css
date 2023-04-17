@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:radial-gradient(#9bdfff,#009be4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.infinite{
+    width: 800px;
+    height: 160px;
+    position: relative;
+    background-color: #525252;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform:perspective(500px)rotateX(45deg) ;
+    -webkit-transform:perspective(500px)rotateX(45deg) ;
+    -moz-transform:perspective(500px)rotateX(45deg) ;
+    -ms-transform:perspective(500px)rotateX(45deg) ;
+    -o-transform:perspective(500px)rotateX(45deg) ;
+}
+.infinite::before{
+    content: '';
+    position: absolute;
+    top:50% ;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    transform: translateY(-50%);
+    background:linear-gradient(90deg,#fff 0%,#fff 70%,#525252 70%,#525252 100%);
+    background-size:120px;
+    animation:animat-girl .4s linear infinite ;
+    -webkit-animation:animat-road .4s linear infinite ;
+}
+@keyframes animat-road{
+0%{
+    background-position: 0px;
+}
+100%{
+    background-position: -120px;
+}
+}
+.infinite::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background:#333;
+    bottom:-30px ;
+    left: 0;
+    transform-origin: top;
+    background-size:120px;
+    transform: translateY(-50%);
+    transform:perspective(500px)rotateX(-25deg) ;
+}
+.shadow{
+    position: absolute;
+    width: 95%;
+    height: 60px;
+    background:#333;
+    bottom:-92px ;
+    left: 50%;
+    background:linear-gradient(#000,transparent);
+    transform: translateX(-50%);
+    opacity: .5;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.girl{
+    position: relative;
+    height: 163px;
+    width: calc(975px/6);
+    overflow: hidden;
+    background-image: url(image/girl.png);
+    transform: perspective(400px)rotatex(-25deg)translateY(-90px);
+    bottom: -50px;
+    animation: animat-girl 1s steps(6)infinite;
+    -webkit-animation: animat-girl 1s steps(6)infinite;
+    -webkit-transform: perspective(400px)rotatex(-25deg)translateY(-90px);
+    -moz-transform: perspective(400px)rotatex(-25deg)translateY(-90px);
+    -ms-transform: perspective(400px)rotatex(-25deg)translateY(-90px);
+    -o-transform: perspective(400px)rotatex(-25deg)translateY(-90px);
+}
+@keyframes animat-girl{
+from{
+background-position: 0;
+}
+to{
+    background-position: -975px;
+}
+}
